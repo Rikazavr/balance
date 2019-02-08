@@ -53,9 +53,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.html$/,
-        include: path.resolve(__dirname, 'src/views'),
-        use: ['raw-loader'],
+        // test: /\.html$/,
+        // include: path.resolve(__dirname, 'src/views'),
+        // use: ['raw-loader'],
+        test: /\.pug$/,
+        use: ['html-loader?attrs=false', 'pug-html-loader']
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
@@ -119,21 +121,26 @@ module.exports = {
       },
     ]),
     new HtmlWebpackPlugin({
-      inject: true,
-      template: path.resolve(__dirname, 'src/index.html'),
+      // template: ‘./src/index.pug’
+      template: path.resolve(__dirname, 'src/index.pug'),
       filename: path.resolve(__dirname, 'public/index.html'),
     }),
-    new HtmlWebpackPlugin({
-      inject: true,
-      templateParameters,
-      template: path.resolve(__dirname, 'src/404.html'),
-      filename: path.resolve(__dirname, 'public/404.html'),
-    }),
-    new HtmlWebpackPlugin({
-      inject: true,
-      templateParameters,
-      template: path.resolve(__dirname, 'src/500.html'),
-      filename: path.resolve(__dirname, 'public/500.html'),
-    }),
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   template: path.resolve(__dirname, 'src/index.html'),
+    //   filename: path.resolve(__dirname, 'public/index.html'),
+    // }),
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   templateParameters,
+    //   template: path.resolve(__dirname, 'src/404.html'),
+    //   filename: path.resolve(__dirname, 'public/404.html'),
+    // }),
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   templateParameters,
+    //   template: path.resolve(__dirname, 'src/500.html'),
+    //   filename: path.resolve(__dirname, 'public/500.html'),
+    // }),
   ],
 };

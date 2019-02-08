@@ -54,9 +54,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.html$/,
-        include: path.resolve(__dirname, 'src/views'),
-        use: ['raw-loader'],
+        // test: /\.html$/,
+        // include: path.resolve(__dirname, 'src/views'),
+        // use: ['raw-loader'],
+        test: /\.pug$/,
+        use: ['pug-loader']
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
@@ -102,9 +104,11 @@ module.exports = {
       },
     ]),
     new HtmlWebpackPlugin({
-      inject: true,
-      template: path.resolve(__dirname, 'src/index.html'),
+      template: path.resolve(__dirname, 'src/index.pug'),
       filename: path.resolve(__dirname, 'public/index.html'),
+      // inject: true,
+      // template: path.resolve(__dirname, 'src/index.html'),
+      // filename: path.resolve(__dirname, 'public/index.html'),
     }),
     new HtmlWebpackPlugin({
       inject: true,
