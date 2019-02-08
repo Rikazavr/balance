@@ -3,7 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const templateParameters = require('./src/template-parameters.js');
+// const templateParameters = require('./src/template-parameters.js');
 
 module.exports = {
   mode: 'production',
@@ -111,16 +111,21 @@ module.exports = {
       // filename: path.resolve(__dirname, 'public/index.html'),
     }),
     new HtmlWebpackPlugin({
-      inject: true,
-      templateParameters,
-      template: path.resolve(__dirname, 'src/404.html'),
-      filename: path.resolve(__dirname, 'public/404.html'),
+      // inject: true,
+      template: path.resolve(__dirname, 'src/about.pug'),
+      filename: path.resolve(__dirname, 'public/about.html'),
     }),
-    new HtmlWebpackPlugin({
-      inject: true,
-      templateParameters,
-      template: path.resolve(__dirname, 'src/500.html'),
-      filename: path.resolve(__dirname, 'public/500.html'),
-    }),
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   templateParameters,
+    //   template: path.resolve(__dirname, 'src/404.html'),
+    //   filename: path.resolve(__dirname, 'public/404.html'),
+    // }),
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   templateParameters,
+    //   template: path.resolve(__dirname, 'src/500.html'),
+    //   filename: path.resolve(__dirname, 'public/500.html'),
+    // }),
   ],
 };

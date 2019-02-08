@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const templateParameters = require('./src/template-parameters.js');
+// const templateParameters = require('./src/template-parameters.js');
 
 module.exports = {
   devtool: 'source-map',
@@ -125,11 +125,11 @@ module.exports = {
       template: path.resolve(__dirname, 'src/index.pug'),
       filename: path.resolve(__dirname, 'public/index.html'),
     }),
-    // new HtmlWebpackPlugin({
-    //   inject: true,
-    //   template: path.resolve(__dirname, 'src/index.html'),
-    //   filename: path.resolve(__dirname, 'public/index.html'),
-    // }),
+    new HtmlWebpackPlugin({
+      // inject: true,
+      template: path.resolve(__dirname, 'src/about.pug'),
+      filename: path.resolve(__dirname, 'public/about.html'),
+    }),
     // new HtmlWebpackPlugin({
     //   inject: true,
     //   templateParameters,

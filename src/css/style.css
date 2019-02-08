@@ -4,35 +4,31 @@
 @import 'fonts.css';
 
 html {
-  font-family: 'MuseoSans', sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 
 body {
-  display: flex;
+  /* display: flex; */
+  min-height: 100vh;
+  background-color: #F3F3F3;
+
   @media (--xs-only) {
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
   }
 
   @media (--sm-only) {
-    border: 5px solid aqua;
+    /* border: 5px solid aqua; */
   }
 
   @media (--md-only) {
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
   }
 
   @media (--lg-only) {
-    border: 5px solid violet;
+    /* border: 5px solid violet; */
   }
 }
 
-.background {
-  height: 200px;
+/* .background {
   background-image: url('~/img/photo.jpg');
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+} */
