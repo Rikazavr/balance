@@ -36,4 +36,14 @@ table {
 
 * {
 	box-sizing: border-box;
+	text-size-adjust: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button,
+input {
+  -webkit-appearance: none;
 }

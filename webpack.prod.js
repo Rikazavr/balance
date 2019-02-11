@@ -3,7 +3,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const templateParameters = require('./src/template-parameters.js');
 
 module.exports = {
   mode: 'production',
@@ -54,9 +53,6 @@ module.exports = {
         ],
       },
       {
-        // test: /\.html$/,
-        // include: path.resolve(__dirname, 'src/views'),
-        // use: ['raw-loader'],
         test: /\.pug$/,
         use: ['pug-loader']
       },
@@ -106,12 +102,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.pug'),
       filename: path.resolve(__dirname, 'public/index.html'),
-      // inject: true,
-      // template: path.resolve(__dirname, 'src/index.html'),
-      // filename: path.resolve(__dirname, 'public/index.html'),
     }),
     new HtmlWebpackPlugin({
-      // inject: true,
       template: path.resolve(__dirname, 'src/about.pug'),
       filename: path.resolve(__dirname, 'public/about.html'),
     }),

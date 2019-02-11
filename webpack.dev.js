@@ -4,7 +4,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const templateParameters = require('./src/template-parameters.js');
 
 module.exports = {
   devtool: 'source-map',
@@ -53,11 +52,8 @@ module.exports = {
         ],
       },
       {
-        // test: /\.html$/,
-        // include: path.resolve(__dirname, 'src/views'),
-        // use: ['raw-loader'],
         test: /\.pug$/,
-        use: ['html-loader?attrs=false', 'pug-html-loader']
+        use: ['pug-loader']
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
@@ -121,7 +117,6 @@ module.exports = {
       },
     ]),
     new HtmlWebpackPlugin({
-      // template: ‘./src/index.pug’
       template: path.resolve(__dirname, 'src/index.pug'),
       filename: path.resolve(__dirname, 'public/index.html'),
     }),
