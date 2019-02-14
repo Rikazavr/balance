@@ -1,0 +1,46 @@
+@import 'reset.css';
+@import 'media.css';
+@import 'fonts.css';
+
+html {
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  padding: 50px 80px 80px;
+  background-color: #F3F3F3;
+
+  @media (--xs-only) {
+  }
+
+  @media (--sm-only) {
+  }
+
+  @media (--md-only) {
+  }
+
+  @media (--lg-only) {
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+  width: 178px;
+  height: 36px;
+  background-image: url('~/img/logo.svg');
+}
+
+.link {
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #000;
+}
