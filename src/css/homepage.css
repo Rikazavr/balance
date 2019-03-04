@@ -1,3 +1,15 @@
+body {
+  @media (--md-only) {
+    .home-background__left {
+      background-position: top 20% left;
+    }
+    .home-background__right {
+      background-size: 1127px;
+      background-position: top 5% left;
+    }
+  }
+}
+
 .home-background {
   display: flex;
   position: absolute;
@@ -10,16 +22,16 @@
 .home-background__left {
   height: 100%;
   width: 40%;
-  background-image: url('~/img/circle-blue.svg');
+  background-image: url('~/img/circle-00.svg');
   background-repeat: no-repeat;
   background-size: 930px;
-  background-position: top 10% center;
+  background-position: top 10% left;
 }
 
 .home-background__right {
   height: 100%;
   width: 60%;
-  background-image: url('~/img/circle-pink.svg');
+  background-image: url('~/img/circle-01.svg');
   background-repeat: no-repeat;
   background-size: 1800px;
   background-position: top 10% left;

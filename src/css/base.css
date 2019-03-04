@@ -22,9 +22,15 @@ body {
   }
 
   @media (--sm-only) {
+    .title {
+      font-size: 64px;
+    }
   }
 
   @media (--md-only) {
+    .title {
+      font-size: 64px;
+    }
   }
 
   @media (--lg-only) {
@@ -39,6 +45,7 @@ body {
 
 .title {
   font-size: 104px;
+  font-weight: 700;
 }
 
 .header {
