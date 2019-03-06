@@ -7,6 +7,9 @@ body {
       background-size: 1127px;
       background-position: top 5% left;
     }
+    .home__text {
+      width: 326px;
+    }
   }
 }
 
@@ -56,5 +59,6 @@ body {
 }
 
 .home__text {
-  width: 475px;
+  margin-bottom: 60px;
+  max-width: 475px;
 }
