@@ -1,7 +1,31 @@
 body {
+
+  @media (--sm-only) {
+    .home-background__left {
+      width: 45%;
+      background-size: 280%;
+      background-position: top 25% left 32%;
+    }
+    .home-background__right {
+      background-size: 240%;
+      background-position: top 30% left;
+    }
+
+    .home__title {
+      width: 42%;
+    }
+    .home__desc {
+      padding: 0 0 80px 76px;
+    }
+    .home__text {
+      width: 326px;
+    }
+  }
+
   @media (--md-only) {
     .home-background__left {
-      background-position: top 20% left;
+      background-size: 230%;
+      background-position: top 25% left 30%;
     }
     .home-background__right {
       background-size: 1127px;
@@ -9,6 +33,13 @@ body {
     }
     .home__text {
       width: 326px;
+    }
+  }
+
+  @media (--lg-only) {
+    .home-background__left {
+      background-size: 1788px;
+      background-position: top 10% left 5%;
     }
   }
 }
@@ -50,8 +81,6 @@ body {
 
 .home__title {
   width: 40%;
-  /* width: 700px; */
-  /* width: calc(40% - 80px); */
 }
 
 .home__desc {

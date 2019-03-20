@@ -21,3 +21,11 @@
     font-weight: 600;
     font-style: normal;
 }
+
+/* для цифр */
+@font-face {
+    font-family: 'drukwide';
+    src: url('~/fonts/drukWide/DrukWide.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

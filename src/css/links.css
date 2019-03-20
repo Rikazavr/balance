@@ -1,0 +1,38 @@
+.link {
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #000;
+}
+.link--about::after {
+  content: '+';
+  display: inline-block;
+  margin-left: 10px;
+  line-height: 18px;
+  height: 12px;
+  transition: all ease .5s;
+}
+.link--about:hover::after {
+  transform: rotate(90deg);
+}
+
+.arrow-link {
+  position: relative;
+  font-size: 22px;
+  line-height: 1.5em;
+  color: #000;
+}
+.arrow-link::after {
+  content: '';
+  margin: 0 0 -24px 30px;
+  display: inline-block;
+  width: 69px;
+  height: 62px;
+  background-image: url('~/img/icons/arrow-next.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all ease .5s;
+}
+.arrow-link:hover::after {
+  margin: 0 0 -24px 50px;
+}
