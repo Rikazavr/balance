@@ -1,21 +1,52 @@
 body {
 
-  @media (--sm-only) {
+  @media (--xs-only) {
+
+    .home {
+      flex-direction: column;
+      align-items: start;
+      padding-top: 70px;
+    }
     .home-background__left {
-      width: 45%;
+      width: 100%;
       background-size: 280%;
-      background-position: top 25% left 32%;
+      background-position: top 50% left 0;
     }
     .home-background__right {
-      background-size: 240%;
-      background-position: top 30% left;
+      position: absolute;
+      width: 100%;
+      background-size: 100%;
+      background-position: center right -300px;
     }
-
     .home__title {
-      width: 42%;
+      width: 99%;
+      margin-bottom: 50px;
+    }
+    .home__text {
+      width: 180px;
+    }
+  }
+
+  @media (--sm-only) {
+    .home {
+      flex-direction: column;
+      align-items: start;
+      justify-content: flex-end;
+    }
+    .home-background__left {
+      width: 80%;
+      background-size: 310%;
+      background-position: top 20% left 30%;
+    }
+    .home-background__right {
+      background-size: 400%;
+      background-position: 0;
+    }
+    .home__title {
+      margin-bottom: 80px;
     }
     .home__desc {
-      padding: 0 0 80px 76px;
+      padding: 0;
     }
     .home__text {
       width: 326px;
@@ -24,12 +55,20 @@ body {
 
   @media (--md-only) {
     .home-background__left {
-      background-size: 230%;
-      background-position: top 25% left 30%;
+      width: 35%;
+      background-size: 280%;
+      background-position: top 25% left 32%;
     }
     .home-background__right {
-      background-size: 1127px;
-      background-position: top 5% left;
+      width: 65%;
+      background-size: 240%;
+      background-position: top 30% left;
+    }
+    .home__title {
+      width: 34%;
+    }
+    .home__desc {
+      padding: 0 0 90px 126px;
     }
     .home__text {
       width: 326px;
@@ -38,8 +77,17 @@ body {
 
   @media (--lg-only) {
     .home-background__left {
+      width: 35%;
       background-size: 1788px;
       background-position: top 10% left 5%;
+    }
+    .home-background__right {
+      width: 65%;
+      background-size: 1800px;
+      background-position: top 10% left;
+    }
+    .home__desc {
+      padding: 0 0 80px 126px;
     }
   }
 }
@@ -55,11 +103,8 @@ body {
 
 .home-background__left {
   height: 100%;
-  width: 40%;
   background-image: url('~/img/circle-00.svg');
   background-repeat: no-repeat;
-  background-size: 930px;
-  background-position: top 10% left;
 }
 
 .home-background__right {
@@ -67,8 +112,6 @@ body {
   width: 60%;
   background-image: url('~/img/circle-01.svg');
   background-repeat: no-repeat;
-  background-size: 1800px;
-  background-position: top 10% left;
 }
 
 .home {
@@ -77,14 +120,6 @@ body {
   align-items: flex-end;
 
   position: relative;
-}
-
-.home__title {
-  width: 40%;
-}
-
-.home__desc {
-  padding: 0 0 80px 126px;
 }
 
 .home__text {

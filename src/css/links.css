@@ -17,7 +17,7 @@
 
 .arrow-link {
   position: relative;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.5em;
   color: #000;
 }
@@ -25,8 +25,8 @@
   content: '';
   margin: 0 0 -24px 30px;
   display: inline-block;
-  width: 69px;
-  height: 62px;
+  width: 60px;
+  height: 60px;
   background-image: url('~/img/icons/arrow-next.svg');
   background-size: contain;
   background-position: center;
@@ -35,4 +35,14 @@
 }
 .arrow-link:hover::after {
   margin: 0 0 -24px 50px;
+}
+
+@media (--lg-only) {
+  .arrow-link {
+    font-size: 22px;
+  }
+  .arrow-link::after {
+    width: 69px;
+    height: 62px;
+  }
 }
