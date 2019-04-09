@@ -13,13 +13,17 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 50px 50px 80px;
+  /* padding: 50px 50px 80px; */
   background-color: #F3F3F3;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.section {
+  /* flex-grow: 1; */
 }
 
 .text {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6em;
   color: rgba(0,0,0,0.6);
 }
@@ -31,10 +35,14 @@ html {
 }
 
 .header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  position: relative;
-  z-index: 1;
+  padding: 50px 50px 0;
 }
 
 .logo {
@@ -46,8 +54,8 @@ html {
 
 .aside {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 50px;
+  bottom: 80px;
   text-align: right;
 }
 .aside__number {
@@ -57,33 +65,39 @@ html {
 }
 
 .list__item {
-  margin-bottom: 30px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.6em;
   color: rgba(0,0,0,0.2);
 }
+.list .list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 .list__item--active {
   color: rgba(0,0,0,1);
 }
-.list__item:last-child {
+/* .list__item:last-child {
   margin-bottom: 50px;
-}
+} */
 
 @media (--xs-only) {
   .body {
+    /* padding: 30px 30px 0; */
+  }
+  .header {
     padding: 30px 30px 0;
   }
   .title {
     font-size: 64px;
   }
   .list__item {
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
     font-size: 14px;
   }
   .aside {
-    top: 314px;
-
+    /* top: 360px; */
+    bottom: 30px;
+    right: 30px;
   }
   .aside__number {
     font-size: 96px;
@@ -91,12 +105,12 @@ html {
 }
 
 @media (--sm-only) {
-  .title {
+  /* .title {
     font-size: 64px;
-  }
-  .text {
-    font-size: 14px;
-  }
+  } */
+  /* .text { */
+    /* font-size: 14px; */
+  /* } */
   .list__item {
     margin-bottom: 18px;
     font-size: 14px;
@@ -107,9 +121,9 @@ html {
 }
 
 @media (--md-only) {
-  .title {
+  /* .title {
     font-size: 64px;
-  }
+  } */
   .list__item {
     margin-bottom: 18px;
     font-size: 14px;
@@ -121,9 +135,9 @@ html {
 
 @media (--lg-only) {
   .body {
-    padding: 50px 80px 80px;
+    /* padding: 50px 80px 80px; */
   }
-  .text {
+  /* .text {
     font-size: 18px;
-  }
+  } */
 }

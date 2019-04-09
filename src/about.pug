@@ -1,15 +1,26 @@
 extends layout
 block content
+  
+  aside.aside
+    ul.list
+      li.list__item
+        a.link(href='#section0') Balance card
+      li.list__item
+        a.link(href='#') Dates
+      li.list__item
+        a.link(href='#') Diagnostics
+      li.list__item
+        a.link(href='#') Total
+        
   //- #fullpage
-  section.section#section0
-    .about
-      .about__header
-      .about__content
-        h1.title.about__title
-          | about
-          br
-          | project
-        .about__desc
-          p.text.home__text
-            | The balance card is&nbsp;a&nbsp;tool by&nbsp;which you analyze your priorities and find out in&nbsp;which area of&nbsp;life you need to&nbsp;make an&nbsp;effort to&nbsp;achieve inner harmony, regain a&nbsp;positive attitude and start living a&nbsp;full life.
-          a.arrow-link(href="#") next
+  section.section.about#section0
+    .about__header
+    .about__content
+      h1.title.about__title
+        | about
+        br
+        | project
+      .about__desc
+        p.text.about__text
+          | The balance card is&nbsp;a&nbsp;tool by&nbsp;which you analyze your priorities and find out in&nbsp;which area of&nbsp;life you need to&nbsp;make an&nbsp;effort to&nbsp;achieve inner harmony, regain a&nbsp;positive attitude and start living a&nbsp;full life.
+        a.arrow-link(href="#") next

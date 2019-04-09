@@ -1,6 +1,21 @@
 .link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6em;
+  color: rgba(0,0,0,0.2);
+  transition: all ease .3s;
+}
+.link:hover {
+  color: rgba(0,0,0,1);
+}
+.link--active {
+  color: rgba(0,0,0,1);
+}
+
+.link--about {
   font-size: 20px;
-  line-height: 1.5em;
+  font-weight: normal;
+  line-height: 2em;
   color: #000;
 }
 .link--about::after {
@@ -18,7 +33,7 @@
 .arrow-link {
   position: relative;
   font-size: 18px;
-  line-height: 1.5em;
+  line-height: 3em;
   color: #000;
 }
 .arrow-link::after {
